@@ -17,6 +17,18 @@ public abstract class Plants : MonoBehaviour
 
     [Header("°ø°Ý¿É")]
     [SerializeField] protected float bulletInterval;
+
+    private void Start()
+    {
+        
+    }
+    protected abstract void Attack();
+
+    protected void NormalPattern()
+    {
+        
+        
+    }
     
 
     

@@ -22,9 +22,11 @@ public class GameManager : MonoBehaviour
     }
     [SerializeField] private Text time;
     [SerializeField] private Text Money;
+    
     private void Start()
     {
         
     }
 
+    
 }

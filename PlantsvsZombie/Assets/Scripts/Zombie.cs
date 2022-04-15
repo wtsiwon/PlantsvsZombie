@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("±âº»")]
+    [SerializeField] protected float hp;
+    [SerializeField] protected float spd;
+    [SerializeField] protected float Damage;
+    [SerializeField] protected float AttackDel;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
