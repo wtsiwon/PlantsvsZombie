@@ -20,9 +20,20 @@ public class GameManager : MonoBehaviour
         }
        
     }
-    [SerializeField] private Text time;
-    [SerializeField] private Text Money;
+    [SerializeField] private Text timeText;
+    [SerializeField] private Text moneyText;
+
+    private float money;
+    public float Money
+    {
+        get => money;
+        set
+        {
+
+        }
+    }
     
+
     private void Start()
     {
         

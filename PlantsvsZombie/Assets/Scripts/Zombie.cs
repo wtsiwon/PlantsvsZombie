@@ -7,7 +7,14 @@ public class Zombie : MonoBehaviour
     [Header("±âº»")]
     [SerializeField] protected float hp;
     [SerializeField] protected float spd;
-    [SerializeField] protected float Damage;
-    [SerializeField] protected float AttackDel;
+    [SerializeField] protected float dmg;
+    [SerializeField] protected float attackSp;
+    [SerializeField] protected float shield;
+    
+
+
+
+
+
 
 }
