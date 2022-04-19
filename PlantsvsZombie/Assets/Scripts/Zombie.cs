@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EZombieType
+{
+    Normal,
+    Shield,
+    Speed
+}
 public class Zombie : MonoBehaviour
 {
     [Header("±âº»")]
@@ -11,10 +17,6 @@ public class Zombie : MonoBehaviour
     [SerializeField] protected float attackSp;
     [SerializeField] protected float shield;
     
-
-
-
-
 
 
 }

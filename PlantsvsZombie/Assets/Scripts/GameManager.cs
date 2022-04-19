@@ -7,7 +7,13 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject draggingObject;
+    public GameObject currentContainer;
     private static GameManager instance;
+    private void Awake()
+    {
+        instance = this;
+    }
     public static GameManager Instance
     {
         get
@@ -20,8 +26,9 @@ public class GameManager : MonoBehaviour
         }
        
     }
-    [SerializeField] private Text timeText;
-    [SerializeField] private Text moneyText;
+    
+   // [SerializeField] private Text timeText;
+    //[SerializeField] private Text moneyText;
 
     private float money;
     public float Money
@@ -33,11 +40,12 @@ public class GameManager : MonoBehaviour
         }
     }
     
-
-    private void Start()
+    public void PlaceObject()
     {
-        
+
     }
+
+    
 
     
 }
