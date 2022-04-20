@@ -22,12 +22,12 @@ public class GameManager : MonoBehaviour
             {
                 instance = FindObjectOfType<GameManager>();
             }
-                return instance;
+            return instance;
         }
-       
+
     }
-    
-   // [SerializeField] private Text timeText;
+
+    // [SerializeField] private Text timeText;
     //[SerializeField] private Text moneyText;
 
     private float money;
@@ -39,13 +39,13 @@ public class GameManager : MonoBehaviour
 
         }
     }
-    
+
     public void PlaceObject()
     {
 
     }
 
-    
 
-    
+
+
 }
