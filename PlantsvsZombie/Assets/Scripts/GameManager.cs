@@ -42,10 +42,10 @@ public class GameManager : MonoBehaviour
 
     public void PlaceObject()
     {
-
+        if(draggingObject != null && currentContainer != null)
+        {
+            Instantiate(draggingObject.GetComponent<ObjectDragging>().card.object_Game, currentContainer.transform);
+            currentContainer.GetComponent<ObjectContainer>().isFull = true;
+        }
     }
-
-
-
-
 }
