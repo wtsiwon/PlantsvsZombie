@@ -20,4 +20,12 @@ public class Bullet : MonoBehaviour
         this.dir = dir;
         this.spd = spd;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        DestroyBullet();
+    }
+    private void DestroyBullet()
+    {
+        BulletPooling.ReturnObject(this);
+    }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3068837553974255334}
   - component: {fileID: 739633654421583718}
   - component: {fileID: 5488378508066746593}
+  - component: {fileID: 2784469035436750597}
   m_Layer: 5
   m_Name: BasicPlantObj_Game
   m_TagString: Untagged
@@ -75,3 +76,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2784469035436750597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846360405090961581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e36eccc92f9e654ba9f0b45f5559e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 50
+  dmg: 10
+  bulletspd: 50
+  bulletInterval: 0.9
+  bulletTime: 0
+  bulletObj: {fileID: 0}
+  firePos: {fileID: 0}

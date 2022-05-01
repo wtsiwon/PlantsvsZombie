@@ -8,35 +8,33 @@ public enum PlantsType
 }
 public abstract class Plants : MonoBehaviour
 {
-    Tile tile;
+    
 
     
     [Header("기본")]
     [SerializeField] protected float hp;
-    [SerializeField] protected int[,] pos = new int[5, 7];
+    [SerializeField] protected float dmg;
+    [SerializeField] protected float bulletspd;
+    
 
     [Header("공격옵")]
     [SerializeField] protected float bulletInterval;
+    [SerializeField] protected float bulletTime;
 
-    private void Start()
-    {
-        
-    }
+
+    [SerializeField] private Bullet bulletObj;
+    [SerializeField] private Transform firePos;
+
+    
     protected abstract void Attack();
 
+    
     protected void NormalPattern()
     {
-        
-        
+        Bullet bullet = BulletPooling.GetObject();
+        bullet.SetBullet(dmg, bulletObj.dir, bulletspd);
     }
     
 
     
-}
-
-
-public struct Tile
-{
-    int x;
-    int y;
 }
