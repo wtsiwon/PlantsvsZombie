@@ -8,13 +8,13 @@ public class Bullet : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    private void Start()
+    private void Start()//한 방향으로만 스폰되고나서 바로 날아가기
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = dir * spd;
     }
 
-    public void SetBullet(float dmg, Vector2 dir, float spd)
+    public void SetBullet(float dmg, Vector2 dir, float spd)//총알 스탯 조정
     {
         this.dmg = dmg;
         this.dir = dir;
@@ -22,9 +22,9 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        DestroyBullet();
+        ReturnBullet();
     }
-    private void DestroyBullet()
+    private void ReturnBullet()
     {
         BulletPooling.ReturnObject(this);
     }

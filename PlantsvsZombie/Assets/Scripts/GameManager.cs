@@ -9,10 +9,20 @@ public class GameManager : MonoBehaviour
 {
     public GameObject draggingObject;
     public GameObject currentContainer;
+    public GameObject MoneyObj;
+    public List<GameObject> spawnpoints = new List<GameObject>();
+
     private static GameManager instance;
+
+
+
     private void Awake()
     {
         instance = this;
+    }
+    private void Start()
+    {
+        InvokeRepeating("Randomspawn", 5f, 5f);//°è¼Ó ·£´ýÀ¸·Î µ· ¼ÒÈ¯ÇÏ±â
     }
     public static GameManager Instance
     {
@@ -26,9 +36,21 @@ public class GameManager : MonoBehaviour
         }
 
     }
+    //public GameObject RandomPoint()//½ºÆù Àå¼Ò ·£´ýÀ¸·Î »Ì±â
+    //{
+    //    GameObject randpoint = spawnpoints[Random.Range(0, spawnpoints.Count)];
+    //    return randpoint;
+    //}
 
-    // [SerializeField] private Text timeText;
-    //[SerializeField] private Text moneyText;
+    public void Randomspawn()
+    {
+        int rand = Random.Range(0, spawnpoints.Count);
+        Instantiate(MoneyObj, spawnpoints[rand].transform.position, MoneyObj.transform.rotation);//µ· ¼ÒÈ¯
+    }
+
+
+    //[SerializeField] private Text timeSlider;
+    [SerializeField] private Text moneyText;
 
     private float money;
     public float Money
@@ -36,7 +58,8 @@ public class GameManager : MonoBehaviour
         get => money;
         set
         {
-
+            money += value;
+            moneyText.text += money;
         }
     }
 
