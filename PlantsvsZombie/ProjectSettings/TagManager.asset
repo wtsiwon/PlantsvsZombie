@@ -16,7 +16,7 @@ TagManager:
   - UI
   - DraggingPlant
   - Container
-  - 
+  - Money
   - 
   - 
   - 
@@ -43,4 +43,28 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: money
+    uniqueID: 3681251461
+    locked: 0
+  - name: 1
+    uniqueID: 3257012521
+    locked: 0
+  - name: 2
+    uniqueID: 700975415
+    locked: 0
+  - name: 3
+    uniqueID: 2910333547
+    locked: 0
+  - name: 4
+    uniqueID: 1973927361
+    locked: 0
+  - name: 5
+    uniqueID: 928945493
+    locked: 0
+  - name: 6
+    uniqueID: 2663767813
+    locked: 0
+  - name: 7
+    uniqueID: 3789971995
     locked: 0
