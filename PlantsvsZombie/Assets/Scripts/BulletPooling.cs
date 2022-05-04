@@ -23,6 +23,7 @@ public class BulletPooling : MonoBehaviour
     {
         var newobj = Instantiate(poolingObject, transform).GetComponent<Bullet>();
         newobj.gameObject.SetActive(false);
+        Debug.Assert(newobj != null,"총알 is null!!");
         return newobj;
     }
 
@@ -34,7 +35,7 @@ public class BulletPooling : MonoBehaviour
         }
     }
 
-    public static Bullet GetObject() 
+    public static Bullet GetObject(Vector2 pos)
     {
         if(Instance.poolingObjectQueue.Count > 0)//남은 오브젝트가 있다면 안에 있는 오브젝트 꺼내서 줌
         {

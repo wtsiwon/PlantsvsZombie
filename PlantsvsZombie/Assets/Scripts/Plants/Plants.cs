@@ -27,14 +27,14 @@ public abstract class Plants : MonoBehaviour
 
     
     protected abstract void Attack();
-
-    
-    protected void NormalPattern()
+    private void Start()
     {
-        Bullet bullet = BulletPooling.GetObject();
+        InvokeRepeating("Attack", 1f, 1.5f);
+    }
+
+    protected void NormalPattern(Transform transform)
+    {
+        Bullet bullet = BulletPooling.GetObject(transform.position);
         bullet.SetBullet(dmg, bulletObj.dir, bulletspd);
     }
-    
-
-    
 }

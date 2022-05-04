@@ -22,7 +22,10 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        ReturnBullet();
+        if (collision.CompareTag("DestroyZone") && collision.CompareTag("Zombie"))
+        {
+            ReturnBullet();
+        }
     }
     private void ReturnBullet()
     {
