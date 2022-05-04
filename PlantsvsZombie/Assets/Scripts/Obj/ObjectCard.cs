@@ -11,12 +11,12 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
     private GameObject objectDragInstace;
     
 
-    public void OnDrag(PointerEventData eventData)
+    public void OnDrag(PointerEventData eventData)//드레그 하는중의 나오는 오브젝의 위치는 마우스 위치다
     {
         objectDragInstace.transform.position = Input.mousePosition;
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void OnPointerDown(PointerEventData eventData)//눌렀을때
     {
         objectDragInstace = Instantiate(object_Drag, canvas.transform);
         objectDragInstace.transform.position = Input.mousePosition;
@@ -25,10 +25,35 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
         GameManager.Instance.draggingObject = objectDragInstace;
     }
 
-    public void OnPointerUp(PointerEventData eventData)
+    public void OnPointerUp(PointerEventData eventData)//땠을때
     {
         GameManager.Instance.PlaceObject();
         GameManager.Instance.draggingObject = null;
         Destroy(objectDragInstace);
     }
+
+
+    /*public void bubblesort()
+    {
+        int[] arr = new int[5];
+        bool sorted = false;
+        do
+        {
+            sorted = false;
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                if (arr[i] > arr[i + 1])
+                {
+                    int temp = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = temp;
+
+                    sorted = true;
+                }
+            }
+        } while (sorted);
+
+
+    }*/
+    
 }

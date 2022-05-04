@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
 
 
-
     private void Awake()
     {
         instance = this;
