@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
     [Header("현재오브젝트 상황")]
     public GameObject draggingObject;
@@ -17,28 +17,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float startspawndel;//돈 소환 시작 딜레이
     [SerializeField] private float spawndelay;//돈 소환 간격
 
-    private static GameManager instance;
-
-
-    private void Awake()
-    {
-        instance = this;
-    }
     private void Start()
-    {
+    { 
         InvokeRepeating("Randomspawn", startspawndel, spawndelay);//계속 랜덤으로 돈 소환하기
-    }
-    public static GameManager Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                instance = FindObjectOfType<GameManager>();
-            }
-            return instance;
-        }
-
     }
     //public GameObject RandomPoint()//스폰 장소 랜덤으로 뽑기
     //{
@@ -63,15 +44,16 @@ public class GameManager : MonoBehaviour
         get => money;
         set
         {
-            money += value;
+            money = value;
             moneyText.text = "Money: " + money.ToString();
         }
     }
 
-    public void PlaceObject()//식물설치 코드
+    public void PlaceObject(int price)//식물설치 코드
     {//드레그 하고 있고 닿은 컨테이너가 있으면 소환한다.
-        if(draggingObject != null && currentContainer != null)
+        if(draggingObject != null && currentContainer != null && money >= price)
         {
+            Money -= price;
             Instantiate(draggingObject.GetComponent<ObjectDragging>().card.object_Game, currentContainer.transform);
             currentContainer.GetComponent<ObjectContainer>().isFull = true;//소환후 칸이 채워졋다 true;
         }

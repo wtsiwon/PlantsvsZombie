@@ -27,7 +27,7 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
 
     public void OnPointerUp(PointerEventData eventData)//¶®À»¶§
     {
-        GameManager.Instance.PlaceObject();
+        GameManager.Instance.PlaceObject(object_Game.GetComponent<BasicPlants>().price);
         GameManager.Instance.draggingObject = null;
         Destroy(objectDragInstace);
     }

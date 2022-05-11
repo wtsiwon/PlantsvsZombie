@@ -6,6 +6,7 @@ public class MoneyObj : MonoBehaviour
 {
     Rigidbody2D rb;
     [SerializeField] private float spd;
+    private const int MONEY = 25;
 
     private void Start()
     {
@@ -14,7 +15,7 @@ public class MoneyObj : MonoBehaviour
     }
     public void MoneyAdd()
     {
-        GameManager.Instance.Money += 25;
+        GameManager.Instance.Money += MONEY;
         Destroy(gameObject);
     }
 

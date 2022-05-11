@@ -6,6 +6,7 @@ public class BasicPlants : Plants
 {
     protected override void Attack()
     {
-        NormalPattern(transform);
+        NormalPattern(this.transform.position);
     }
+
 }

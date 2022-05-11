@@ -90,8 +90,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 50
   dmg: 10
-  bulletspd: 50
+  bulletspd: 600
+  price: 50
   bulletInterval: 0.9
   bulletTime: 0
-  bulletObj: {fileID: 4679016633598891886, guid: a25332ec0fc36414ea3388f6d19e8619, type: 3}
-  firePos: {fileID: 0}

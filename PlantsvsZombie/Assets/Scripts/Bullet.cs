@@ -22,13 +22,16 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("DestroyZone") && collision.CompareTag("Zombie"))
+        if (collision.CompareTag("Zombie"))
         {
-            ReturnBullet();
+            ObjPool.Instance.ReturnObject(this);
         }
     }
-    private void ReturnBullet()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        BulletPooling.ReturnObject(this);
+        if (collision.CompareTag("DestroyZone"))
+        {
+            ObjPool.Instance.ReturnObject(this);
+        }
     }
 }

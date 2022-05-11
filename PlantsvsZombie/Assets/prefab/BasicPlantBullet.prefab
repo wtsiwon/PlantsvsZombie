@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4679016633598891886}
   m_Layer: 9
   m_Name: BasicPlantBullet
-  m_TagString: Plants
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 1520fc3ccf4e2a5408a31e1860deadc2, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -137,6 +137,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0adb15d49ae93b841b4bb32f09c6dc94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 0
+  dmg: 1
   dir: {x: 1, y: 0}
-  spd: 0
+  spd: 100

@@ -8,6 +8,8 @@ TagManager:
   - Plants
   - Zombie
   - DestroyZone
+  - Bullet
+  - Canvas
   layers:
   - Default
   - TransparentFX

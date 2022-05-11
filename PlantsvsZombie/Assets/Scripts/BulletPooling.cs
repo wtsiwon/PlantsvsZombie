@@ -7,11 +7,10 @@ public class BulletPooling : MonoBehaviour
     public static BulletPooling Instance;
 
     [SerializeField]
-    private GameObject poolingObject;//오브젝트
-
+    private GameObject poolingObject;//풀링할 오브젝트
+    
     //오브젝트를 저장할 큐메모리
     private Queue<Bullet> poolingObjectQueue = new Queue<Bullet>();
-
     
     private void Awake()
     {
@@ -27,7 +26,7 @@ public class BulletPooling : MonoBehaviour
         return newobj;
     }
 
-    private void Initialize(int count)//처음에 기본적으로 생성할 오브젝트 생성
+    private void Initialize(int count)//처음에 기본적으로 생성할 오브젝트를 생성해주는 함수
     {
         for (int i = 0; i < count; i++)
         {
