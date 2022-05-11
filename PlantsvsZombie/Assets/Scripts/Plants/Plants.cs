@@ -1,6 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+public enum EPlantsType
+{
+    Basic,
+    Ice,
+    SunFlower,
+    DoubleShooter,
+    Stone,
+    Boom
+}
+public enum EBulletType
+{
+    Base,
+    Ice
+}
 
 public abstract class Plants : MonoBehaviour
 {
@@ -9,6 +23,7 @@ public abstract class Plants : MonoBehaviour
     [SerializeField] protected float dmg;
     [SerializeField] protected float bulletspd;
 
+    public EPlantsType ePlantsType;
     public int price;
     
 
@@ -21,9 +36,13 @@ public abstract class Plants : MonoBehaviour
     {
         InvokeRepeating("Attack", 1f, 1.5f);
     }
-    protected void NormalPattern(Vector3 pos)
+    protected void BasicPattern(Vector3 pos)
     {
-        Bullet bullet = ObjPool.Instance.GetObj(pos);
+        Bullet bullet = BaseObjPool.Instance.GetObj(pos);
         bullet.SetBullet(dmg, bullet.dir, bulletspd);
+    }
+    protected void IcePattern(Vector3 pos)
+    {
+
     }
 }

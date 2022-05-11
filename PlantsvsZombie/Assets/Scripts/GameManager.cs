@@ -50,7 +50,8 @@ public class GameManager : Singleton<GameManager>
     }
 
     public void PlaceObject(int price)//식물설치 코드
-    {//드레그 하고 있고 닿은 컨테이너가 있으면 소환한다.
+    {
+        //드레그 하고 있고 닿은 컨테이너가 있으면 소환한다.
         if(draggingObject != null && currentContainer != null && money >= price)
         {
             Money -= price;

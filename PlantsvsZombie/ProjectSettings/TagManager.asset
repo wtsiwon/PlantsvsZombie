@@ -8,8 +8,9 @@ TagManager:
   - Plants
   - Zombie
   - DestroyZone
-  - Bullet
   - Canvas
+  - BaseBullet
+  - IceBullet
   layers:
   - Default
   - TransparentFX

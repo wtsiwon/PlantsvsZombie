@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjPool : Singleton<ObjPool>
+public class BaseObjPool : Singleton<BaseObjPool>
 {
     public Bullet Bullet;
 

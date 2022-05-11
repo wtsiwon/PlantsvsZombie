@@ -5,6 +5,12 @@ public class Bullet : MonoBehaviour
     public float dmg;
     public Vector2 dir;
     public float spd;
+    private enum EBulletType
+    {
+        Basic,
+        Ice
+    }
+    private EBulletType bulletType;
 
     private Rigidbody2D rb;
 
@@ -19,19 +25,20 @@ public class Bullet : MonoBehaviour
         this.dmg = dmg;
         this.dir = dir;
         this.spd = spd;
+        //this.bulletType = bulletType;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Zombie"))
         {
-            ObjPool.Instance.ReturnObject(this);
+            BaseObjPool.Instance.ReturnObject(this);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("DestroyZone"))
         {
-            ObjPool.Instance.ReturnObject(this);
+            BaseObjPool.Instance.ReturnObject(this);
         }
     }
 }
