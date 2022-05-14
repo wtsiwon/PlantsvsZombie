@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet : Obj
 {
     public float dmg;
     public Vector2 dir;

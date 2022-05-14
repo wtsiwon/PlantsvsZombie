@@ -8,7 +8,7 @@ public enum EZombieType
     Shield,
     Speed
 }
-public class Zombie : MonoBehaviour
+public class Zombie : Obj
 {
     [Header("±âº»")]
     [SerializeField] protected float hp;

@@ -16,7 +16,7 @@ public enum EBulletType
     Ice
 }
 
-public abstract class Plants : MonoBehaviour
+public abstract class Plants : Obj
 {
     [Header("±âº»")]
     [SerializeField] protected float hp;

@@ -10,17 +10,22 @@ public class ObjectContainer : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        
+
         if (GameManager.Instance.draggingObject != null && isFull == false)
         {
-            GameManager.Instance.currentContainer = this.gameObject;
-            backgroundImage.enabled = true;
-
+            if (collision.CompareTag("Plants"))
+            {
+                backgroundImage.enabled = true;
+                GameManager.Instance.currentContainer = this.gameObject;
+            }
         }
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
-        GameManager.Instance.currentContainer = null;
-        backgroundImage.enabled = false;
+        if (collision.CompareTag("Plants"))
+        {
+            GameManager.Instance.currentContainer = null;
+            backgroundImage.enabled = false;
+        }
     }
 }
