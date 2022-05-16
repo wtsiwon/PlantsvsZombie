@@ -31,29 +31,4 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
         GameManager.Instance.draggingObject = null;
         Destroy(objectDragInstace);
     }
-
-
-    /*public void bubblesort()
-    {
-        int[] arr = new int[5];
-        bool sorted = false;
-        do
-        {
-            sorted = false;
-            for (int i = 0; i < arr.Length - 1; i++)
-            {
-                if (arr[i] > arr[i + 1])
-                {
-                    int temp = arr[i];
-                    arr[i] = arr[i + 1];
-                    arr[i + 1] = temp;
-
-                    sorted = true;
-                }
-            }
-        } while (sorted);
-
-
-    }*/
-    
 }

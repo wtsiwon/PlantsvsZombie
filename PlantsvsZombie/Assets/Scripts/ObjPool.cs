@@ -24,9 +24,19 @@ public class ObjPool : Singleton<ObjPool>
         {
             pool.Add(type, new Queue<Obj>());
         }
-      
+        Queue<Obj> queue = pool[type];
 
-        return obj;
+        Obj bb = Origintypes[(int)type];
+        if (queue.Count > 0)
+        {
+            obj = queue.Dequeue();
+        }
+        else
+        {
+            Instantiate(bb);
+        }
+
+            return obj;
     }
 
 }
