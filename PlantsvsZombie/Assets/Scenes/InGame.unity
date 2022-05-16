@@ -4646,6 +4646,8 @@ MonoBehaviour:
   type: 0
   Origintypes:
   - {fileID: 4679016633598891886, guid: a25332ec0fc36414ea3388f6d19e8619, type: 3}
+  - {fileID: 2997804379463955708, guid: 728a02076b17e1542b9bda59ec4095fa, type: 3}
+  - {fileID: 2539612440742018794, guid: f8e55a5d526265f4d90f69f805d6cce9, type: 3}
 --- !u!1001 &1881999514
 PrefabInstance:
   m_ObjectHideFlags: 0
