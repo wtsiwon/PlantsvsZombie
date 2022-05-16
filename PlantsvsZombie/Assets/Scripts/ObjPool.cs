@@ -13,14 +13,14 @@ public class ObjPool : Singleton<ObjPool>
 {
     public ePool_ObjType type;//오브젝트의 타입을 받는다
 
-    public Obj[] Origintypes;//실제 오브젝트를 저장할 Obj형 배열을 만든다.
+    public Obj[] Origintypes;//실제 오브젝트를 저장할 Obj형 배열을 만든다.(유니티 인스펙터에서 넣어줌)
 
     //딕셔너리란? 
     //딕셔너리는 키와 값이 존재하는데 꼭 키에 대응하는 값이 하나 존재한다.
     //값을 부르려면 그에 대응 하는 키를 넣어야 한다
     public Dictionary<ePool_ObjType, Queue<Obj>> pool = new Dictionary<ePool_ObjType, Queue<Obj>>();
 
-    public Obj GetObj(ePool_ObjType type)
+    public Obj GetObj(ePool_ObjType type,Vector3 pos)
     {
         Obj obj = null;
         if (!pool.ContainsKey(type))//인자로 넣은 타입이 없으면 넣어준다.
@@ -33,23 +33,23 @@ public class ObjPool : Singleton<ObjPool>
         Obj origin = Origintypes[(int)type];
 
 
-        if (queue.Count > 0)
+        if (queue.Count > 0)//큐에 오브젝트가 남이 있다면
         {
-            obj = queue.Dequeue();
-            obj.gameObject.SetActive(true);
+            obj = queue.Dequeue();//큐에서 빼서줌
         }
-        else
+        else//없다면 스폰후 줌
         {
             obj = Instantiate(origin);
-            obj.gameObject.SetActive(true);
         }
+        obj.transform.position = pos;
+        obj.gameObject.SetActive(true);
         return obj;
     }
 
-    public T Get<T>(ePool_ObjType type)
+    public T Get<T>(ePool_ObjType type,Vector3 pos)
         where T : MonoBehaviour
     {
-        return GetObj(type).GetComponent<T>();
+        return GetObj(type, pos).GetComponent<T>();
     }
     public void Return(ePool_ObjType type, Obj obj)
     {

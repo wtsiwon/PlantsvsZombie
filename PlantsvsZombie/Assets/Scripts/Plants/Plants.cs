@@ -38,7 +38,7 @@ public abstract class Plants : Obj
     }
     protected void BasicPattern(Vector3 pos)
     {
-        Bullet bullet = BaseObjPool.Instance.GetObj(pos);
+        //Bullet bullet = ObjPool.GetObj(ePool_ObjType.BaseBullet, pos);
         bullet.SetBullet(dmg, bullet.dir, bulletspd);
     }
     protected void IcePattern(Vector3 pos)
