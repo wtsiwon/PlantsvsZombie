@@ -1892,7 +1892,7 @@ MonoBehaviour:
   MoneyObj: {fileID: 1635622483524321935, guid: f8e55a5d526265f4d90f69f805d6cce9, type: 3}
   Spawnpoint: {fileID: 648054279}
   startspawndel: 5
-  spawndelay: 1
+  spawndelay: 7
   moneyText: {fileID: 1721325204}
 --- !u!1001 &931454968
 PrefabInstance:
