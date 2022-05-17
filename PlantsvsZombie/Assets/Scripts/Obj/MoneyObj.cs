@@ -16,7 +16,14 @@ public class MoneyObj : Obj
     public void MoneyAdd()
     {
         GameManager.Instance.Money += MONEY;
-        Destroy(gameObject);
+        ObjPool.Instance.Return(pooltype,this);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("DestroyZone"))
+        {
+            ObjPool.Instance.Return(pooltype, this);
+        }
     }
 
 }

@@ -10,12 +10,6 @@ public enum EPlantsType
     Stone,
     Boom
 }
-public enum EBulletType
-{
-    Base,
-    Ice
-}
-
 public abstract class Plants : Obj
 {
     [Header("±âº»")]
@@ -38,11 +32,12 @@ public abstract class Plants : Obj
     }
     protected void BasicPattern(Vector3 pos)
     {
-        //Bullet bullet = ObjPool.GetObj(ePool_ObjType.BaseBullet, pos);
-        //bullet.SetBullet(dmg, bullet.dir, bulletspd);
+        Bullet bullet = ObjPool.Instance.Get<Bullet>(ePool_ObjType.BaseBullet,pos);
+        bullet.SetBullet(dmg, bullet.dir, bulletspd);
     }
     protected void IcePattern(Vector3 pos)
     {
-
+        Bullet bullet = ObjPool.Instance.Get<Bullet>(ePool_ObjType.IceBullet, pos);
+        bullet.SetBullet(dmg, bullet.dir, bulletspd);
     }
 }

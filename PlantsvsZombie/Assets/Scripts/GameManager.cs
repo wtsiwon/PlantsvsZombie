@@ -31,7 +31,8 @@ public class GameManager : Singleton<GameManager>
     {
         int rand = Random.Range(600, 1600);
         Vector2 spawnpoint = new Vector2(rand, Spawnpoint.transform.position.y);
-        Instantiate(MoneyObj, spawnpoint, MoneyObj.transform.rotation,GameObject.Find("Blocks").transform);
+        ObjPool.Instance.Get<MoneyObj>(ePool_ObjType.Money, spawnpoint);
+        //Instantiate(MoneyObj, spawnpoint, MoneyObj.transform.rotation,GameObject.Find("Blocks").transform);
     }
 
 

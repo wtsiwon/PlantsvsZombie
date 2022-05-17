@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Obj : MonoBehaviour
 {
-   
+    public ePool_ObjType pooltype;
 }

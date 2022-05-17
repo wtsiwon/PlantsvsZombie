@@ -1,16 +1,16 @@
 using UnityEngine;
 
+public enum EBulletType
+{
+    Basic,
+    Ice
+}
 public class Bullet : Obj
 {
     public float dmg;
     public Vector2 dir;
     public float spd;
-    private enum EBulletType
-    {
-        Basic,
-        Ice
-    }
-    private EBulletType bulletType;
+    public EBulletType bulletType;
 
     private Rigidbody2D rb;
 
@@ -20,25 +20,19 @@ public class Bullet : Obj
         rb.velocity = dir * spd;
     }
 
-    public void SetBullet(float dmg, Vector2 dir, float spd)//ÃÑ¾Ë ½ºÅÈ Á¶Á¤
+    public void SetBullet(float dmg, Vector2 dir, float spd, EBulletType eBulletType = EBulletType.Basic)//ÃÑ¾Ë ½ºÅÈ Á¶Á¤
     {
         this.dmg = dmg;
         this.dir = dir;
         this.spd = spd;
-        //this.bulletType = bulletType;
+        this.bulletType = eBulletType;
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Zombie"))
+        if (collision.CompareTag("Zombie") || collision.CompareTag("DestroyZone"))
         {
-            BaseObjPool.Instance.ReturnObject(this);
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("DestroyZone"))
-        {
-            BaseObjPool.Instance.ReturnObject(this);
+            ObjPool.Instance.Return(pooltype, this);
         }
     }
 }

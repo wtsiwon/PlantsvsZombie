@@ -39,14 +39,14 @@ public class ObjPool : Singleton<ObjPool>
         }
         else//없다면 스폰후 줌
         {
-            obj = Instantiate(origin);
+            obj = Instantiate(origin, GameObject.Find("Blocks").transform);
         }
         obj.transform.position = pos;
         obj.gameObject.SetActive(true);
         return obj;
     }
 
-    public T Get<T>(ePool_ObjType type,Vector3 pos)
+    public T Get<T>(ePool_ObjType type,Vector3 pos)//
         where T : MonoBehaviour
     {
         return GetObj(type, pos).GetComponent<T>();
