@@ -19,7 +19,6 @@ public abstract class Plants : Obj
 
     public EPlantsType ePlantsType;
     public int price;
-    
 
     [Header("°ø°Ý¿É")]
     [SerializeField] protected float bulletInterval;
@@ -32,12 +31,22 @@ public abstract class Plants : Obj
     }
     protected void BasicPattern(Vector3 pos)
     {
-        Bullet bullet = ObjPool.Instance.Get<Bullet>(ePool_ObjType.BaseBullet,pos);
-        bullet.SetBullet(dmg, bullet.dir, bulletspd);
+        Bullet bullet = ObjPool.Instance.Get<Bullet>(ePool_ObjType.BaseBullet, pos);
+        bullet.SetBullet(dmg, bullet.dir, bulletspd, EBulletType.Basic);
     }
     protected void IcePattern(Vector3 pos)
     {
         Bullet bullet = ObjPool.Instance.Get<Bullet>(ePool_ObjType.IceBullet, pos);
-        bullet.SetBullet(dmg, bullet.dir, bulletspd);
+        bullet.SetBullet(dmg, bullet.dir, bulletspd, EBulletType.Ice);
+    }
+    protected void DoublePattern(Vector3 pos)
+    {
+        Bullet bullet1 = ObjPool.Instance.Get<Bullet>(ePool_ObjType.BaseBullet, pos);
+        StartCoroutine(CDoublePattern(pos));
+        Bullet bullet2 = ObjPool.Instance.Get<Bullet>(ePool_ObjType.BaseBullet, pos);
+    }
+    IEnumerator CDoublePattern(Vector3 pos)
+    {
+        yield return new WaitForSeconds(0.2f);
     }
 }

@@ -14,11 +14,12 @@ public class Bullet : Obj
 
     private Rigidbody2D rb;
 
-    private void Start()//한 방향으로만 스폰되고나서 바로 날아가기
+    private void OnEnable()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = dir * spd;
     }
+
 
     public void SetBullet(float dmg, Vector2 dir, float spd, EBulletType eBulletType = EBulletType.Basic)//총알 스탯 조정
     {
@@ -37,7 +38,7 @@ public class Bullet : Obj
             {
                 ObjPool.Instance.Return(ePool_ObjType.BaseBullet, this);
             }
-            else if(bulletType == EBulletType.Ice)
+            else if (bulletType == EBulletType.Ice)
             {
                 ObjPool.Instance.Return(ePool_ObjType.IceBullet, this);
             }

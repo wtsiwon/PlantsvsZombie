@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 3684973492798772107}
   - component: {fileID: 2997804379463955708}
   m_Layer: 5
-  m_Name: IceBullet
-  m_TagString: Untagged
+  m_Name: IcePlantBullet
+  m_TagString: IceBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,6 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0adb15d49ae93b841b4bb32f09c6dc94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pooltype: 1
   dmg: 10
   dir: {x: 1, y: 0}
-  spd: 100
+  spd: 500
+  bulletType: 1
