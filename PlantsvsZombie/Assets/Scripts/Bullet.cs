@@ -30,9 +30,17 @@ public class Bullet : Obj
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.CompareTag("Zombie") || collision.CompareTag("DestroyZone"))
         {
-            ObjPool.Instance.Return(pooltype, this);
+            if (bulletType == EBulletType.Basic)
+            {
+                ObjPool.Instance.Return(ePool_ObjType.BaseBullet, this);
+            }
+            else if(bulletType == EBulletType.Ice)
+            {
+                ObjPool.Instance.Return(ePool_ObjType.IceBullet, this);
+            }
         }
     }
 }

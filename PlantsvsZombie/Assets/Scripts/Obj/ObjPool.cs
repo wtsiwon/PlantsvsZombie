@@ -46,7 +46,7 @@ public class ObjPool : Singleton<ObjPool>
         return obj;
     }
 
-    public T Get<T>(ePool_ObjType type,Vector3 pos)//
+    public T Get<T>(ePool_ObjType type,Vector3 pos)
         where T : MonoBehaviour
     {
         return GetObj(type, pos).GetComponent<T>();

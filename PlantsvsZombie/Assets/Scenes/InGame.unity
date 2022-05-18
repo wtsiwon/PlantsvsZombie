@@ -765,7 +765,7 @@ GameObject:
   - component: {fileID: 326035079}
   m_Layer: 5
   m_Name: DestroyZone
-  m_TagString: Untagged
+  m_TagString: DestroyZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1928,8 +1928,8 @@ MonoBehaviour:
   currentContainer: {fileID: 0}
   MoneyObj: {fileID: 1635622483524321935, guid: f8e55a5d526265f4d90f69f805d6cce9, type: 3}
   Spawnpoint: {fileID: 648054279}
-  startspawndel: 5
-  spawndelay: 7
+  startspawndel: 1
+  spawndelay: 1
   moneyText: {fileID: 1721325204}
 --- !u!1001 &931454968
 PrefabInstance:
@@ -2941,7 +2941,7 @@ GameObject:
   - component: {fileID: 1184697631}
   m_Layer: 0
   m_Name: DestroyZoneR
-  m_TagString: Untagged
+  m_TagString: DestroyZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3713,7 +3713,7 @@ GameObject:
   - component: {fileID: 1601865719}
   m_Layer: 0
   m_Name: DestroyZoneB
-  m_TagString: Untagged
+  m_TagString: DestroyZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
