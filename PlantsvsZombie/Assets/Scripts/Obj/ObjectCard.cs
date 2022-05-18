@@ -35,7 +35,7 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
     
     public void OnPointerUp(PointerEventData eventData)//¶®À»¶§
     {
-        switch (type)
+        switch (type)//½Ä¹° Á¾·ù¿¡ µû¶ó °¡°Ý¼³Á¤
         {
             case Etype.Basic:
                 GameManager.Instance.PlaceObject(object_Game.GetComponent<BasicPlants>().price);
@@ -53,7 +53,7 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
                 GameManager.Instance.PlaceObject(object_Game.GetComponent<BasicPlants>().price);//¹Ù²ã¾ß´ï
                 break;
             case Etype.Double:
-                GameManager.Instance.PlaceObject(object_Game.GetComponent<BasicPlants>().price);//¹Ù²ã¾ß´ï
+                GameManager.Instance.PlaceObject(object_Game.GetComponent<DoublePlants>().price);//¹Ù²ã¾ß´ï
                 break;
         }
         GameManager.Instance.draggingObject = null;

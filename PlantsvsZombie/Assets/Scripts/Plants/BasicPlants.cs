@@ -8,5 +8,4 @@ public class BasicPlants : Plants
     {
         BasicPattern(transform.position);
     }
-
 }

@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IcePlants : Plants
+public class DoublePlants : Plants
 {
     protected override void Attack()
     {
-        IcePattern(transform.position);
+        DoublePattern(transform.position);
     }
 }

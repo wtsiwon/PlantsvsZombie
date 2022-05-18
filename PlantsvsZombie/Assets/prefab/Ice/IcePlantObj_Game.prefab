@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3068837553974255334}
   - component: {fileID: 739633654421583718}
   - component: {fileID: 5488378508066746593}
-  - component: {fileID: 2977243672063858364}
+  - component: {fileID: -1732153393203920892}
   m_Layer: 5
   m_Name: IcePlantObj_Game
   m_TagString: Untagged
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2977243672063858364
+--- !u!114 &-1732153393203920892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,7 +91,7 @@ MonoBehaviour:
   pooltype: 0
   hp: 50
   dmg: 10
-  bulletspd: 500
+  bulletspd: 100
   ePlantsType: 1
   price: 175
   bulletInterval: 0.9

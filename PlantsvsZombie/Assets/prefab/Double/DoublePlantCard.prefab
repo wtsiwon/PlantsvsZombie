@@ -37,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -866.4464, y: 397.58}
-  m_SizeDelta: {x: 187.1136, y: 118.839}
+  m_AnchoredPosition: {x: -835.3489, y: 385.40012}
+  m_SizeDelta: {x: 249.3087, y: 143.1988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7449290947882672522
 CanvasRenderer:
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7989552740842674172, guid: ec9a719f97b6706438a9c40cba759f66, type: 3}
+  m_Sprite: {fileID: -8223437875804204280, guid: e264ff4fe342b904a95d95ca497276d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -116,10 +116,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd1c482c1efd5146ad0231b341992a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  object_Drag: {fileID: 846360405090961581, guid: 7ee3955a22d00cd44b0dfad61bac3ba9, type: 3}
-  object_Game: {fileID: 846360405090961581, guid: b1fa807b881be6742941950a5200ad4c, type: 3}
+  object_Drag: {fileID: 846360405090961581, guid: 302f315dbee8aa8429d1237d0184d04d, type: 3}
+  object_Game: {fileID: 846360405090961581, guid: 9a85ddb2af51d5e4d8b53ec8297cd778, type: 3}
   canvas: {fileID: 0}
-  type: 1
+  type: 5
 --- !u!1 &7449290947931838623
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.601136, y: 0.5}
-  m_AnchoredPosition: {x: -49.177864, y: 0}
+  m_AnchoredPosition: {x: -70.9, y: -21.8}
   m_SizeDelta: {x: 61.6441, y: 30}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!222 &7449290947931838620
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 50
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
@@ -198,4 +198,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 50
+  m_Text: 200

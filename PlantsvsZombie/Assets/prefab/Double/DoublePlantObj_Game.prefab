@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3068837553974255334}
   - component: {fileID: 739633654421583718}
   - component: {fileID: 5488378508066746593}
-  - component: {fileID: 2977243672063858364}
+  - component: {fileID: 5783774383903936699}
   m_Layer: 5
   m_Name: DoublePlantObj_Game
   m_TagString: Untagged
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4dd519c7a019f434f8d303e8f9bafc9e, type: 3}
+  m_Sprite: {fileID: 1133213693345275453, guid: c054538515e8752458d7e1f904b53046, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2977243672063858364
+--- !u!114 &5783774383903936699
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,14 +85,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 846360405090961581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94e18155d60ea44d99a096ab8a770c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 98bfdeeb129ec70468be3a174e931976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pooltype: 0
   hp: 50
   dmg: 10
-  bulletspd: 500
-  ePlantsType: 1
-  price: 175
-  bulletInterval: 0.9
+  bulletspd: 100
+  ePlantsType: 3
+  price: 200
+  bulletInterval: 1
   bulletTime: 0

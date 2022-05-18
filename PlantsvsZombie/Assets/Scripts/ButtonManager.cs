@@ -9,6 +9,4 @@ public class ButtonManager : MonoBehaviour
     {
         SceneManager.LoadScene("InGame");
     }
-
-    
 }

@@ -1,0 +1,216 @@
+fileFormatVersion: 2
+guid: e264ff4fe342b904a95d95ca497276d7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8223437875804204280
+    second: DoublePlantCard_0
+  - first:
+      213: 8020738684481386865
+    second: DoublePlantCard_1
+  - first:
+      213: -3516985873000282143
+    second: DoublePlantCard_2
+  - first:
+      213: 1641131273725949304
+    second: DoublePlantCard_3
+  - first:
+      213: 7091254561683361618
+    second: DoublePlantCard_4
+  - first:
+      213: 5733097774568089163
+    second: DoublePlantCard_5
+  - first:
+      213: -2732694671884086751
+    second: DoublePlantCard_6
+  - first:
+      213: 1843055589779591161
+    second: DoublePlantCard_7
+  - first:
+      213: 1062761497532427941
+    second: DoublePlantCard_8
+  - first:
+      213: 3906869946445500747
+    second: DoublePlantCard_9
+  - first:
+      213: 513383278032975916
+    second: DoublePlantCard_10
+  - first:
+      213: -5757204270974658888
+    second: DoublePlantCard_11
+  - first:
+      213: 1152117273355497696
+    second: DoublePlantCard_12
+  - first:
+      213: 1866676346883123016
+    second: DoublePlantCard_13
+  - first:
+      213: -8386952214506244027
+    second: DoublePlantCard_14
+  - first:
+      213: -8863263852701687112
+    second: DoublePlantCard_15
+  - first:
+      213: 3367370528830776179
+    second: DoublePlantCard_16
+  - first:
+      213: 6501602178971433368
+    second: DoublePlantCard_17
+  - first:
+      213: -4711258206298082580
+    second: DoublePlantCard_18
+  - first:
+      213: -7424576227100503218
+    second: DoublePlantCard_19
+  - first:
+      213: 6183869113622754531
+    second: DoublePlantCard_20
+  - first:
+      213: -3389700674349090792
+    second: DoublePlantCard_21
+  - first:
+      213: 5836872020276379120
+    second: DoublePlantCard_22
+  - first:
+      213: -4790636193454082476
+    second: DoublePlantCard_23
+  - first:
+      213: 6285010454891952375
+    second: DoublePlantCard_24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 78, y: 164, z: 85, w: 68}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DoublePlantCard_0
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 162
+        width: 187
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803923452da70ed80800000000000000
+      internalID: -8223437875804204280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
