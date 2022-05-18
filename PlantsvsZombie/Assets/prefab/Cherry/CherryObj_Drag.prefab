@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 3068837553974255334}
   - component: {fileID: 739633654421583718}
   - component: {fileID: 5488378508066746593}
-  - component: {fileID: -1732153393203920892}
-  - component: {fileID: 1425382981913310243}
-  - component: {fileID: -7448762852307680102}
+  - component: {fileID: 3587025193682370289}
+  - component: {fileID: 7983029488731649436}
+  - component: {fileID: -7078284304545843679}
   m_Layer: 5
-  m_Name: IcePlantObj_Game
-  m_TagString: Untagged
+  m_Name: CherryObj_Drag
+  m_TagString: Plants
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 140, y: 140}
+  m_AnchoredPosition: {x: -647, y: 249.58}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &739633654421583718
 CanvasRenderer:
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4dd519c7a019f434f8d303e8f9bafc9e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b10d2c9450b9cbf459f985194ee98ae2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -78,27 +78,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &-1732153393203920892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846360405090961581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94e18155d60ea44d99a096ab8a770c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pooltype: 0
-  hp: 50
-  dmg: 10
-  bulletspd: 500
-  ePlantsType: 1
-  price: 175
-  bulletInterval: 0.9
-  bulletTime: 0
---- !u!61 &1425382981913310243
+--- !u!61 &3587025193682370289
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +91,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.41423035, y: 2.6574402}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -122,9 +102,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 72.662506, y: 46.403015}
   m_EdgeRadius: 0
---- !u!50 &-7448762852307680102
+--- !u!50 &7983029488731649436
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -144,4 +124,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &-7078284304545843679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846360405090961581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03684ebd8904d44fbac68d5297754ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 0}

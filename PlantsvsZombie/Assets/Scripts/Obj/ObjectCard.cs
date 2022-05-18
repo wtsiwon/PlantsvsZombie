@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 public enum Etype
 {
     Basic,
@@ -32,28 +29,21 @@ public class ObjectCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
 
         GameManager.Instance.draggingObject = objectDragInstace;
     }
-    
+
     public void OnPointerUp(PointerEventData eventData)//¶®À»¶§
     {
         switch (type)//½Ä¹° Á¾·ù¿¡ µû¶ó °¡°Ý¼³Á¤
         {
             case Etype.Basic:
-                GameManager.Instance.PlaceObject(object_Game.GetComponent<BasicPlants>().price);
-                break;
-            case Etype.Ice:
-                GameManager.Instance.PlaceObject(object_Game.GetComponent<IcePlants>().price);
-                break;
-            case Etype.Money:
-                GameManager.Instance.PlaceObject(object_Game.GetComponent<BasicPlants>().price);//¹Ù²ã¾ß´ï
-                break;
-            case Etype.Stone:
-                GameManager.Instance.PlaceObject(object_Game.GetComponent<BasicPlants>().price);//¹Ù²ã¾ß´ï
-                break;
-            case Etype.Cherry:
-                GameManager.Instance.PlaceObject(object_Game.GetComponent<BasicPlants>().price);//¹Ù²ã¾ß´ï
-                break;
+            case Etype.Ice:   
+            case Etype.Money:       
+            case Etype.Stone:       
+            case Etype.Cherry:   
             case Etype.Double:
-                GameManager.Instance.PlaceObject(object_Game.GetComponent<DoublePlants>().price);//¹Ù²ã¾ß´ï
+                GameManager.Instance.PlaceObject(object_Game.GetComponent<Plants>().price);//¹Ù²ã¾ß´ï
+                break;
+            default:
+                Debug.Assert(false);
                 break;
         }
         GameManager.Instance.draggingObject = null;

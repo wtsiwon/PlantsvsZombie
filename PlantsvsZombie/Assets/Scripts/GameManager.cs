@@ -35,7 +35,13 @@ public class GameManager : Singleton<GameManager>
         //Instantiate(MoneyObj, spawnpoint, MoneyObj.transform.rotation,GameObject.Find("Blocks").transform);
     }
 
-
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Money += 100;
+        }
+    }
     //[SerializeField] private Text timeSlider;
     [SerializeField] private Text moneyText;
 

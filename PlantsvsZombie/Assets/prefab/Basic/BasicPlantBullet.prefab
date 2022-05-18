@@ -137,6 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0adb15d49ae93b841b4bb32f09c6dc94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pooltype: 0
   dmg: 1
   dir: {x: 1, y: 0}
-  spd: 100
+  spd: 500
+  bulletType: 0
