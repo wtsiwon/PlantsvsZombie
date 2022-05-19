@@ -20,6 +20,7 @@ public abstract class Plants : Obj
 
     public EPlantsType ePlantsType;
     public int price;
+    protected bool isAttacked;
 
     [Header("공격옵")]
     [SerializeField] protected float bulletInterval;
@@ -31,6 +32,18 @@ public abstract class Plants : Obj
     {
         InvokeRepeating("Attack", 1f, 1.5f);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Zombie"))
+        {
+            isAttacked = true;
+        }
+    }
+    protected void Update()
+    {
+        
+    }
+    #region 식물 총알 발사 패턴
     protected void BasicPattern(Vector3 pos)//기본 식물 총발사
     {
         Bullet bullet = ObjPool.Instance.Get<Bullet>(ePool_ObjType.BaseBullet, pos);
@@ -51,10 +64,5 @@ public abstract class Plants : Obj
         yield return new WaitForSeconds(0.4f);
         Bullet bullet2 = ObjPool.Instance.Get<Bullet>(ePool_ObjType.BaseBullet, pos);
     }
-
-    
-    
-
-
-
+    #endregion
 }

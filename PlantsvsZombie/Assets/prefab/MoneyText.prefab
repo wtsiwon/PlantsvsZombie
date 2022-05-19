@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6126003017319185671}
   - component: {fileID: 6126003017319185664}
   - component: {fileID: 6126003017319185665}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: MoneyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -345, y: -107}
-  m_SizeDelta: {x: 61.5426, y: 56.8177}
+  m_AnchoredPosition: {x: -329.35718, y: -107}
+  m_SizeDelta: {x: 92.8282, y: 56.8177}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &6126003017319185671
 MeshRenderer:

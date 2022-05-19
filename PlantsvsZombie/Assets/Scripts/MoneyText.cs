@@ -11,7 +11,6 @@ public class MoneyText : MonoBehaviour
     public float destroyTime;
     private void Start()
     {
-        
         text = GetComponent<TextMeshPro>();
         text.text = "+25";
         alpha = text.color;

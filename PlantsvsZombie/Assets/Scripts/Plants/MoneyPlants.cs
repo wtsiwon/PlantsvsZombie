@@ -16,10 +16,9 @@ public class MoneyPlants : Plants
     {
         InvokeRepeating("Money", instantiateTime, instantiateTime);
     }
-    private void Money()
+    private void Money()//Boom¿ÃπÃ¡ˆ
     {
         Instantiate(text, transform.position, Quaternion.identity,GameObject.Find("Blocks").transform);
         GameManager.Instance.Money += 25;
     }
-
 }
