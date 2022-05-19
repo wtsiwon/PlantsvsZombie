@@ -8,15 +8,22 @@ public enum EZombieType
     Shield,
     Speed
 }
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(BoxCollider2D))]
 public class Zombie : Obj
 {
+    protected Rigidbody2D rb;
+
     [Header("±âº»")]
-    [SerializeField] protected float hp;
-    [SerializeField] protected float spd;
-    [SerializeField] protected float dmg;
-    [SerializeField] protected float attackSp;
-    [SerializeField] protected float shield;
-    
+    public float hp;
+    public float spd;
+    public float dmg;
+    public float attackSp;
+    public float shield;
+    private void Start()
+    {
+        rb.velocity = Vector3.left * spd;
+    }
 
 
 }

@@ -29,7 +29,7 @@ public class GameManager : Singleton<GameManager>
 
     public void Randomspawn()//µ∑ º“»Ø
     {
-        int rand = Random.Range(600, 1600);
+        int rand = Random.Range(800, 1600);
         Vector2 spawnpoint = new Vector2(rand, Spawnpoint.transform.position.y);
         ObjPool.Instance.Get<MoneyObj>(ePool_ObjType.Money, spawnpoint);
         //Instantiate(MoneyObj, spawnpoint, MoneyObj.transform.rotation,GameObject.Find("Blocks").transform);

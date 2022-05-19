@@ -52,20 +52,9 @@ public abstract class Plants : Obj
         Bullet bullet2 = ObjPool.Instance.Get<Bullet>(ePool_ObjType.BaseBullet, pos);
     }
 
-    protected IEnumerator CBoom(Vector3 pos, Image ImageBoom)//CherryÅÍÁü
-    {
-        yield return new WaitForSeconds(2.5f);
-        Instantiate(ImageBoom, pos,Quaternion.identity ,GameObject.Find("Blocks").transform);
-        StartCoroutine(CBoom1(ImageBoom));
-        
-    }
-    protected IEnumerator CBoom1(Image ImageBoom)
-    {
-        yield return new WaitForSeconds(1f);
-        Debug.Log("¾îÂ¿");
-        ImageBoom.gameObject.SetActive(false);
-        Destroy(gameObject);
-    }
+    
+    
+
 
 
 }

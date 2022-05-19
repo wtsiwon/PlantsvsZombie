@@ -14,27 +14,11 @@ public class Cherry : Plants
     }
     private void Start()
     {
-        //StartCoroutine(_Color());
-        StartCoroutine(CBoom(transform.position, ImageBoom));
+        Invoke("Boom",2.5f);
     }
-    private IEnumerator _Color()
+    protected void Boom()//Cherry≈Õ¡¸
     {
-        yield return new WaitForSeconds(2.5f);
-        gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        Instantiate(ImageBoom, transform.position, Quaternion.identity, GameObject.Find("Blocks").transform);
+        Destroy(gameObject);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Zombie"))
-        {
-            StartCoroutine(wait(collision));
-        }
-    }
-    private IEnumerator wait(Collider2D collision)
-    {
-        yield return new WaitForSeconds(2.5f);
-        //ImageBoom.transform.position = transform.position;
-        //ImageBoom.gameObject.SetActive(true);
-        Destroy(collision.gameObject);
-    }
-   
 }
