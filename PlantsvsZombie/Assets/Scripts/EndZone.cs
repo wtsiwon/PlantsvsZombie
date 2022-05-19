@@ -8,7 +8,7 @@ public class EndZone : MonoBehaviour
     {
         if (collision.CompareTag("Zombie"))
         {
-
+            GameManager.Instance.BadEnding();
         }
     }
 }

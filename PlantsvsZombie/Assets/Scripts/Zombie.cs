@@ -22,6 +22,7 @@ public class Zombie : Obj
     public float attackSp;
     public float shield;
     private float dspd;//defaultSpeed
+    private float time;
     private void Start()
     {
         rb= GetComponent<Rigidbody2D>();
@@ -32,20 +33,48 @@ public class Zombie : Obj
     {
         if (collision.CompareTag("Plants"))
         {
-            isAttacking = true;
+            rb.velocity = Vector3.left * 0;
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        
+        if (collision.CompareTag("Plants") && time >= attackSp)
+        {
+            isAttacking = true;
+            Attack(collision);
+            time = 0;
+        }
+        if (collision.CompareTag("Bullet"))
+        {
+            hp -= collision.GetComponent<Bullet>().dmg;
+        }
+    }
+    
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Plants"))
         {
             isAttacking = false;
+            rb.velocity = Vector3.left * spd;
+            spd = dspd;
         }
     }
-
+    private void Update()
+    {
+        time += Time.deltaTime;
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+    public void Attack(Collider2D collision)
+    {
+        collision.GetComponent<Plants>().hp -= dmg;
+    }
     private void OnDestroy()
     {
-        if(GameManager.Instance.lastWave == true)
+        if(GameManager.Instance.islastWave == true)
         {
             GameManager.Instance.zombiecount--;
         }

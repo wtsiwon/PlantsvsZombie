@@ -12,11 +12,13 @@ public class GameManager : Singleton<GameManager>
     public GameObject draggingObject;
     public GameObject currentContainer;
 
+    public GameObject LastWave;
     [Space(20)]
     public GameObject MoneyObj;
     public Transform Spawnpoint;
     public bool isEnd;
     public bool lastWave;
+    public bool islastWave;
     public int zombiecount = 12;
     [SerializeField] private float startspawndel;//µ∑ º“»Ø Ω√¿€ µÙ∑π¿Ã
     [SerializeField] private float spawndelay;//µ∑ º“»Ø ∞£∞›
@@ -43,7 +45,8 @@ public class GameManager : Singleton<GameManager>
     {
         if(zombiecount == 0)
         {
-
+            Debug.Log(zombiecount);
+            HappyEnding();
         }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {

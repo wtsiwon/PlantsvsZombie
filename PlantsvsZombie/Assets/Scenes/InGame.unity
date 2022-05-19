@@ -2303,13 +2303,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draggingObject: {fileID: 0}
   currentContainer: {fileID: 0}
+  LastWave: {fileID: 379088680}
   MoneyObj: {fileID: 1635622483524321935, guid: f8e55a5d526265f4d90f69f805d6cce9, type: 3}
   Spawnpoint: {fileID: 648054279}
   isEnd: 0
   lastWave: 0
-  zombiecount: 0
-  startspawndel: 7
-  spawndelay: 7
+  islastWave: 0
+  zombiecount: 12
+  startspawndel: 5
+  spawndelay: 4.5
   moneyText: {fileID: 1721325204}
 --- !u!1001 &931454968
 PrefabInstance:

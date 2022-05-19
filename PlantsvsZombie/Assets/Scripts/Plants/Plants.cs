@@ -14,9 +14,9 @@ public enum EPlantsType
 public abstract class Plants : Obj
 {
     [Header("±âº»")]
-    [SerializeField] protected float hp;
-    [SerializeField] protected float dmg;
-    [SerializeField] protected float bulletspd;
+    public float hp;
+    public float dmg;
+    public float bulletspd;
 
     public EPlantsType ePlantsType;
     public int price;
@@ -37,6 +37,10 @@ public abstract class Plants : Obj
         if (collision.CompareTag("Zombie"))
         {
             isAttacked = true;
+            if(hp <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
     protected void Update()
