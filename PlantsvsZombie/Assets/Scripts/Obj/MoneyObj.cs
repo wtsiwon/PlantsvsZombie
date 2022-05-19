@@ -1,11 +1,10 @@
 using UnityEngine;
-[RequireComponent(typeof(BoxCollider2D))]
+using TMPro;
 public class MoneyObj : Obj
 {
     Rigidbody2D rb;
     [SerializeField] private float spd;
     private const int MONEY = 25;
-
 
     private void OnEnable()
     {
