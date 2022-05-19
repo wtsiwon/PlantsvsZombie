@@ -9,4 +9,8 @@ public class ButtonManager : MonoBehaviour
     {
         SceneManager.LoadScene("InGame");
     }
+    public void GoTitle()
+    {
+        SceneManager.LoadScene("Title");
+    }
 }

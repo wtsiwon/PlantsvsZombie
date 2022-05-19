@@ -13,6 +13,7 @@ TagManager:
   - IceBullet
   - Bullet
   - Boom
+  - EndZone
   layers:
   - Default
   - TransparentFX
@@ -22,9 +23,9 @@ TagManager:
   - UI
   - DraggingPlant
   - Container
-  - Bullet
   - Money
-  - 
+  - Bullet
+  - Text
   - 
   - 
   - 

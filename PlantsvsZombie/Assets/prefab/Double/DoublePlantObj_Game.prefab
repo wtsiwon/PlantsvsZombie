@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4782477250032286313}
   m_Layer: 5
   m_Name: DoublePlantObj_Game
-  m_TagString: Untagged
+  m_TagString: Plants
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   bulletspd: 500
   ePlantsType: 3
   price: 200
-  bulletInterval: 1.2
+  bulletInterval: 1.6
   bulletTime: 0
 --- !u!61 &548325477607817476
 BoxCollider2D:

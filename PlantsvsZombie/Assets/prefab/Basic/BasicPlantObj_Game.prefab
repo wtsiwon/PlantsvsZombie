@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -5452740476203971845}
   m_Layer: 5
   m_Name: BasicPlantObj_Game
-  m_TagString: Untagged
+  m_TagString: Plants
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,10 +93,10 @@ MonoBehaviour:
   pooltype: 0
   hp: 50
   dmg: 10
-  bulletspd: 600
+  bulletspd: 500
   ePlantsType: 0
   price: 100
-  bulletInterval: 0.9
+  bulletInterval: 1.5
   bulletTime: 0
 --- !u!61 &-6696402271823249753
 BoxCollider2D:
