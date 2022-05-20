@@ -27,12 +27,7 @@ public class GameManager : Singleton<GameManager>
     {
         InvokeRepeating("Randomspawn", startspawndel, spawndelay);//계속 랜덤으로 돈 소환하기
     }
-    //public GameObject RandomPoint()//스폰 장소 랜덤으로 뽑기
-    //{
-    //    GameObject randpoint = spawnpoints[Random.Range(0, spawnpoints.Count)];
-    //    return randpoint;
-    //}
-
+   
     public void Randomspawn()//돈 소환
     {
         int rand = Random.Range(800, 1600);

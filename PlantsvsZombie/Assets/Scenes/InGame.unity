@@ -2310,7 +2310,7 @@ MonoBehaviour:
   lastWave: 0
   islastWave: 0
   zombiecount: 12
-  startspawndel: 5
+  startspawndel: 2
   spawndelay: 4.5
   moneyText: {fileID: 1721325204}
 --- !u!1001 &931454968

@@ -35,19 +35,23 @@ public class Zombie : Obj
         {
             rb.velocity = Vector3.left * 0;
         }
+        if (collision.CompareTag("Bullet"))
+        {
+            hp -= collision.GetComponent<Bullet>().dmg;
+        }
+        if (collision.CompareTag("IceBullet"))
+        {
+            rb.velocity = Vector2.left * spd / 2;
+        }
+
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        
         if (collision.CompareTag("Plants") && time >= attackSp)
         {
             isAttacking = true;
             Attack(collision);
             time = 0;
-        }
-        if (collision.CompareTag("Bullet"))
-        {
-            hp -= collision.GetComponent<Bullet>().dmg;
         }
     }
     

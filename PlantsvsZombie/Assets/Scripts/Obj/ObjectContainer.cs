@@ -24,6 +24,7 @@ public class ObjectContainer : MonoBehaviour
     {
         if (collision.CompareTag("Plants"))
         {
+            isFull = false;
             GameManager.Instance.currentContainer = null;
             backgroundImage.enabled = false;
         }

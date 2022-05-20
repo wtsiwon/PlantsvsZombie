@@ -6,7 +6,7 @@ public class ZombieSpawner : MonoBehaviour
     [SerializeField]
     private GameObject[] SpawnPoint;
     private float time;
-    private float spawnTime = 15f;
+    private float spawnTime = 10f;
     [SerializeField]
     private GameObject Zombie;
     private void Start()

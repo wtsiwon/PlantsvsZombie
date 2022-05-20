@@ -140,7 +140,7 @@ MonoBehaviour:
   pooltype: 0
   isAttacking: 0
   hp: 100
-  spd: 50
+  spd: 40
   dmg: 10
   attackSp: 1
   shield: 0
